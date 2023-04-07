@@ -13,4 +13,9 @@ export class ServersComponent {
       this.allowNewServer = true;
     }, 2000);
   }
+
+  getServerCreationStatus(): void {
+
+    this.serverCreationStatus = "server created successfully";
+  }
 }

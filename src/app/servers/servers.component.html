@@ -1,6 +1,6 @@
 <h2 class="text-center text-danger m-3">servers works!</h2>
 <br>
-
+<p class="text-center fs-4 text-primary">{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
 
@@ -11,7 +11,8 @@
         </div>
 
         <div class="col p-3 m-3 d-inline-block">
-            <button type="button" class="btn btn-outline-info btn-lg" [disabled]="!allowNewServer">Add Server</button>
+            <button type="button" class="btn btn-outline-info btn-lg" [disabled]="!allowNewServer"
+            (click)="getServerCreationStatus()">Add Server</button>
         </div>
 
     </div>
