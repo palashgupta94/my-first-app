@@ -18,3 +18,13 @@
     </div>
     
 </div>
+
+<!-- <input class="form-control form-control-lg" type="text" 
+placeholder=".form-control-lg" aria-label=".form-control-lg example"
+(input)="onUpdateServerName($event)"> -->
+
+<input class="form-control form-control-lg" type="text" 
+placeholder=".form-control-lg" aria-label=".form-control-lg example"
+[(ngModel)]="serverName">
+
+<p class="m-2 text-center fs-4 text-primary">{{ serverName }}</p>
