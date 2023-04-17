@@ -1,14 +1,17 @@
 <h2 class="text-center text-danger m-3">servers works!</h2>
 <br>
-<p class="text-center fs-4 text-primary">{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <p class="text-center fs-4 text-primary">{{ serverCreationStatus }}</p> -->
+
+
+<input class="form-control form-control-lg" type="text" 
+placeholder=".form-control-lg" aria-label=".form-control-lg example"
+[(ngModel)]="serverName">
 
 <div class="container text-center">
     <div class="row">
-        <div class="col d-inline-block text-dark text-center p-3 m-3 border border-danger" style="background-color: tan" >
+        <!-- <div class="col d-inline-block text-dark text-center p-3 m-3 border border-danger" style="background-color: tan" >
             <span class="fs-3">Add more servers</span>
-        </div>
+        </div> -->
 
         <div class="col p-3 m-3 d-inline-block">
             <button type="button" class="btn btn-outline-info btn-lg" [disabled]="!allowNewServer"
@@ -19,12 +22,14 @@
     
 </div>
 
+<p class="text-center fs-3 text-danger" *ngIf="serverCreated">server was created. name is {{ serverName }}</p>
+<app-server></app-server>
+<app-server></app-server>
+
 <!-- <input class="form-control form-control-lg" type="text" 
 placeholder=".form-control-lg" aria-label=".form-control-lg example"
 (input)="onUpdateServerName($event)"> -->
 
-<input class="form-control form-control-lg" type="text" 
-placeholder=".form-control-lg" aria-label=".form-control-lg example"
-[(ngModel)]="serverName">
+
 
 <!-- <p class="m-2 text-center fs-4 text-primary">{{ serverName }}</p> -->
