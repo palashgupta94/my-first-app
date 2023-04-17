@@ -22,7 +22,14 @@ placeholder=".form-control-lg" aria-label=".form-control-lg example"
     
 </div>
 
-<p class="text-center fs-3 text-danger" *ngIf="serverCreated">server was created. name is {{ serverName }}</p>
+<p class="text-center fs-3 text-danger" *ngIf="serverCreated; else noServer">server was created. name is {{ serverName }}</p>
+
+<ng-template #noServer>
+    <p class="text-center fs-3 text-danger">
+        no server was created.
+    </p>
+</ng-template>
+
 <app-server></app-server>
 <app-server></app-server>
 

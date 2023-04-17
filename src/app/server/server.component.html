@@ -1,2 +1,3 @@
 <h3 class="text-center text-primary fs-3">This is server component!<h3>
-<p>Server {{ serverID }} is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{offline: status === 'offline'}">Server {{ serverID }} is {{ getServerStatus() }}</p>
